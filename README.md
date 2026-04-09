@@ -1,7 +1,7 @@
 # Spam-Classification
 A web application that classifies messages as Spam or Ham and displays the confidence percentage.
 
-Dataset
+Dataset:
 SMS Spam Collection from UCI Machine Learning Repository
 Telegram Spam from Hugging Face Website
 
