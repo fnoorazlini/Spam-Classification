@@ -7,7 +7,7 @@ Dataset:
 
 How to Run
 Download all the files.
-To open the web application, run app.py or open this link in your browser: http://127.0.0.1:5000
+To open the web application, open this link in your browser: http://127.0.0.1:5000
 
 Example 
 Spam Message:
