@@ -2,8 +2,8 @@
 A web application that classifies messages as Spam or Ham and displays the confidence percentage.
 
 Dataset:
-SMS Spam Collection from UCI Machine Learning Repository
-Telegram Spam from Hugging Face Website
+1) SMS Spam Collection from UCI Machine Learning Repository
+2) Telegram Spam from Hugging Face Website
 
 How to Run
 Download all the files.
