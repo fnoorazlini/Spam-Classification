@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMS and Messaging Apps Spam Classification</title>
+    <style>
+        body {
+            background-color: #e6cce6;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            padding-top: 50px;
+        }
+        h1 {
+            margin-bottom: 50px;
+        }
+        textarea {
+            width: 60%;
+            height: auto;
+            min-height: 80px;
+            max-height: 300px;
+            font-size: 14px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            resize: none;
+            overflow: hidden;
+            line-height: 1.5;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            background-color: white;
+        }
+        button:hover {
+            background-color: #d4d4d4;
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            color: black;
+        }
+        .container {
+            background: #d2a3d2;
+            padding: 50px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+
+        .info-button {
+            background-color: #fff0f5;
+            border: 2px solid #b56bb5;
+            color: #4b004b;
+            margin-top: 20px;
+        }
+
+        .info-box {
+            display: none;
+            background-color: #fbe8fb;
+            border: 1px solid #cc99cc;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 12px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>SMS and Messaging Apps Spam Classification</h1>
+
+    <form method="post">
+        <h3>Enter the message:</h3>
+        <textarea name="message" rows="5" placeholder="Enter your message...">{{ message_text }}</textarea>
+
+        <br><br>
+        <button type="submit" name="submit_action" value="predict">Enter</button>
+        <button type="submit" name="submit_action" value="clear">Clear</button>
+    </form>
+
+    {% if prediction %}
+    <h2 class="result">{{ prediction }}</h2>
+    {% endif %}
+
+    <!-- More Info Button -->
+    <button class="info-button" onclick="toggleInfo()">More Info about Spam</button>
+
+    <!-- Info Box -->
+    <div class="info-box" id="spamInfo">
+        <h3>📌 What is a Spam Message?</h3>
+        <p>
+        Spam messages refer to unsolicited or irrelevant communications sent to a large number of recipients, often for advertising, phishing, or fraudulent purposes. These messages may appear across various platforms, including SMS, email, and messaging applications.
+        </p>
+        <p>
+            Common characteristics of spam messages include:
+        </p>
+        <ul style="text-align: left; margin-left: 25%;">
+            <li>🔗 Suspicious or deceptive hyperlinks</li>
+            <li>💸 Promises of financial rewards or prizes</li>
+            <li>📣 Excessive or irrelevant advertisements</li>
+            <li>📥 Requests for sensitive personal information</li>
+        </ul>
+        <p>
+            Users are advised to avoid interacting with unknown messages, refrain from clicking unfamiliar links, and utilize spam filters or classification systems to enhance digital safety.
+        </p>
+        <p>
+            This classification system aims to assist in identifying and filtering out potential spam to improve user experience and online security.
+        </p>
+    </div>
+</div>
+
+<script>
+    function toggleInfo() {
+        var info = document.getElementById("spamInfo");
+        info.style.display = info.style.display === "block" ? "none" : "block";
+    }
+</script>
+
+</body>
+</html>
