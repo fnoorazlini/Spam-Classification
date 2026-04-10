@@ -15,3 +15,4 @@ Congratulations! You’ve won RM5,000 cash prize! Click this link now to claim b
 
 Normal (Ham) Message:
 Hi, are we still meeting tomorrow at 3PM for the project discussion?
+<img width="1897" height="903" alt="image" src="https://github.com/user-attachments/assets/25e2a420-6fe2-47b3-982b-8d2725e19894" />
